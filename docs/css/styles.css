@@ -4,8 +4,13 @@
     padding: 0;
 }
 
+
 html {
     font-size: 10px;
+}
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -23,6 +28,33 @@ html {
     --clr-white:#FFFFFF;
     
     /* Media Queries */
-    --mq-mobile: 375px;
-    --mg-desktop: 1440px;
+    --vp-mobile: 375px;
+    --vp-desktop: 1440px;
 }
+
+/* Propiedades generales */
+
+a, a:visited {
+    text-decoration: none;
+}
+
+header, section, footer {
+    padding-inline: 8.72%;
+}
+
+
+/* Header */
+
+
+header {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5.5rem; /*7.5*/
+}
+
+.header--nav, .header--btn {
+    display: none;
+}
+
