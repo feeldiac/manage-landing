@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    /* Colors */
+    --clr-dark-black:#000000;
+    --clr-footer-black:#1E1E26;
+    --clr-logo:#242D52;
+    --clr-header-links:#242E52;
+    --clr-h1:#232C50;
+    --clr-h2:#242E53;
+    --clr-btn-bg-orange:#F3603B;
+    --clr-gray-placeholder:#A0A0A0;
+    --clr-gray:#B3B2B7;
+    --clr-darker-gray:#B9B9C1;
+    --clr-white:#FFFFFF;
+    
+    /* Media Queries */
+    --mq-mobile: 375px;
+    --mg-desktop: 1440px;
+}
