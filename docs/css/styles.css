@@ -25,6 +25,7 @@ body {
     --clr-gray-placeholder:#A0A0A0;
     --clr-gray:#B3B2B7;
     --clr-darker-gray:#B9B9C1;
+    --clr-card-titles-bg:#fff0eb;
     --clr-white:#FFFFFF;
     
     /* Media Queries */
@@ -39,7 +40,34 @@ a, a:visited {
 }
 
 header, section, footer {
-    padding-inline: 8.72%;
+    padding-inline: 8%;
+    padding-block: 5.5rem; /*7.5*/
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+/* Botones */
+
+.btn span{
+    padding-inline: 3.05rem;
+    padding-block: 1.25rem;
+    background-color: var(--clr-btn-bg-orange);
+    border-radius: 5rem;
+}
+
+.btn, .btn:visited {
+    color: var(--clr-white);
+    font-size: 1.318rem;
+    text-transform: capitalize;
+}
+
+.text {
+    /* color: var(--clr-dark-black); */
+    color: var(--clr-darker-gray);
+    font-size: 1.45rem; /*1.63rem*/
+    line-height: 1.6;
 }
 
 
@@ -51,10 +79,96 @@ header {
     /* flex-direction: column; */
     align-items: center;
     justify-content: space-between;
-    padding-top: 5.5rem; /*7.5*/
 }
 
 .header--nav, .header--btn {
     display: none;
 }
 
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero--illustration {
+   margin-inline: 2%; 
+}
+
+.hero--illustration img {
+    width: 100%;
+}
+
+.hero--content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.hero--title {
+    color: var(--clr-h1);
+    font-size: 3.5rem;
+    letter-spacing: -0.12rem;
+}
+
+/* Features */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    padding-inline: 3%;
+}
+
+.features--abstract {
+    padding-inline: 5%;
+}
+
+.features--title {
+    color: var(--clr-h2);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3.6rem;
+}
+
+.features--text {
+    text-align: center;
+}
+
+/* Features cards */
+
+.features--cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+}
+
+/* Features single card */
+
+.features--card-title {
+    background-color: var(--clr-card-titles-bg);
+    color: var(--clr-h2);
+    font-size: 1.52rem;
+    margin-bottom: 1.5rem;
+    padding-block: 0.9rem;
+    width: 100%;
+}
+
+.features--card-title:before {
+    background-color: var(--clr-btn-bg-orange);
+    border-radius: 2rem;
+    color: #FFFFFF;
+    content: '01';
+    padding: 0.9rem 2.2rem;
+    margin-right: 1.3rem;
+}
+
+.features--card:nth-child(2) .features--card-title:before {
+    content: '02';
+}
+
+.features--card:nth-child(3) .features--card-title:before {
+    content: '03';
+}
