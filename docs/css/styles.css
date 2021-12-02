@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5 {
 
 /* Botones */
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,6 @@ h1, h2, h3, h4, h5 {
     font-size: 1.318rem;
     font-weight: 500;
     text-transform: capitalize;
-
 }
 
 .btn-primary a, .btn-primary a:visited {
@@ -368,6 +367,13 @@ footer {
     text-transform: capitalize;
 }
 
+.footer--bot-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
 /* Footer social */
 
 .footer--social {
@@ -382,9 +388,6 @@ footer {
     color: var(--clr-white);
 }
 
-/* .footer--logo, .footer--copyright {
-    align-self: center;
-} */
 
 .footer--copyright {
     color: var(--clr-gray);
@@ -394,8 +397,176 @@ footer {
 
 /* Media Queries Rules */
 
-@media only screen and (min-width: 769px){
-    body {
-        background-color: red;
+@media only screen and (min-width: 1099px){
+
+    /* General rules */
+
+    header, section {
+        padding-block: 6.5rem; 
     }
+
+    footer {
+        padding-block-start: 6.5rem;
+    }
+
+    /* Header */
+
+    header {
+        align-items: center;
+    }
+
+    .header--burger {
+        display: none;
+    }
+
+    .header--nav {
+        display: block;
+    }
+
+    .header--nav ul {
+        display: flex;
+        gap: 2.8rem;
+    }
+
+    .header--nav a, .header--nav a:visited {
+        color: var(--clr-header-links);
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .header--btn {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero--illustration {
+        margin-inline: 0;
+    }
+
+    .hero--content {
+        order: -1;
+        width: 40%;
+        text-align: start;
+        align-items: flex-start;
+    } 
+
+    .hero--title {
+        font-size: 5.8rem;
+    }
+
+    .text {
+        font-size: 1.656rem;
+    }
+
+    .hero--text {
+        width: 75%;
+    }
+
+    /* Features */
+
+    .features {
+        flex-direction: row;
+        gap: 21rem;
+        /* justify-content: center; */
+        padding-inline: 8%;
+    }
+
+    .features--abstract {
+        padding-inline: 0;
+    }
+
+    .features--title {
+        text-align: start;
+        font-size: 3.6rem;
+    }
+
+    .features--text {
+        text-align: start;
+        width: 90%;
+    }
+
+    .features--card-title {
+        background-color: transparent;
+        font-size: 1.6rem;
+    }
+
+    .features--card-title:before {
+        margin-right: 2.3rem;
+    }
+
+    .features--card-text {
+        margin-inline-start: 8.6rem;
+        font-size: 1.63rem;
+        letter-spacing: -1%;
+    }
+
+    /* Testimonials */
+
+    .testimonials--title {
+        font-size: 3.921rem;
+        margin-block-end: 4rem;
+    }
+
+    .testimonials--cards {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .testimonials--card:not(.testimonials--card:nth-child(2)) {
+        display: flex;
+    }
+
+    .carousel-dots {
+        display: none;
+    }
+
+    /* Footer top */
+
+    .footer--top {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 11%;
+    }
+
+    .footer--top-title {
+        font-size: 4rem;
+        text-align: start;
+        line-height: 1;
+        width: 45%;
+    }
+
+    .footer--bot {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .footer--subscribe {
+        align-self: flex-start;
+        float: right;
+    }
+
+    .footer--bot-group {
+        flex-direction: column-reverse;
+        order: -2;
+    }
+
+    .footer--nav {
+        order: -1;
+    }
+
+    /* .footer--copyright {
+        display: ;
+    } */
 }
