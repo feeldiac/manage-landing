@@ -475,7 +475,6 @@ footer {
     .features {
         flex-direction: row;
         gap: 21rem;
-        /* justify-content: center; */
         padding-inline: 8%;
     }
 
@@ -545,28 +544,43 @@ footer {
         width: 45%;
     }
 
+    /* Footer bot */
+
     .footer--bot {
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 0;
+        justify-content: center;
+        align-content: space-around;
+        height: 24.7rem;
+        gap: 5rem;
     }
 
-    .footer--subscribe {
-        align-self: flex-start;
-        float: right;
-    }
 
-    .footer--bot-group {
-        flex-direction: column-reverse;
+    .footer--social {
         order: -2;
+        justify-content: center;
+        gap: 1.33rem;
+    }
+
+    .fa-facebook-square, .fa-youtube,
+    .fa-youtube, .fa-twitter,
+    .fa-pinterest, .fa-instagram {
+        font-size: 2.2rem;
+    }   
+
+    .footer--logo {
+        order: -3;
     }
 
     .footer--nav {
         order: -1;
     }
 
-    /* .footer--copyright {
-        display: ;
-    } */
+    .footer--nav-column {
+        gap: 1.2rem;
+    }
+
+    .footer--copyright {
+        align-self: end;
+    }
+
 }
