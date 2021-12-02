@@ -11,6 +11,9 @@ html {
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     overflow-x: hidden;
+    min-width: 37.5rem;
+    max-width: 144rem;
+    margin-inline: auto;
 }
 
 :root {
@@ -35,6 +38,10 @@ body {
 }
 
 /* Propiedades generales */
+
+ul {
+    list-style-type: none;
+}
 
 a, a:visited {
     text-decoration: none;
@@ -67,7 +74,9 @@ h1, h2, h3, h4, h5 {
 
 .btn a, .btn a:visited {
     font-size: 1.318rem;
+    font-weight: 500;
     text-transform: capitalize;
+
 }
 
 .btn-primary a, .btn-primary a:visited {
@@ -88,7 +97,7 @@ h1, h2, h3, h4, h5 {
 header {
     display: flex;
     /* flex-direction: column; */
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -232,7 +241,7 @@ header {
     width: 7rem;
     border-radius: 50%;
     position: absolute;
-    bottom: 18rem;
+    bottom: 80%;
 }
 
 .testimonials--card-img img {
@@ -255,6 +264,8 @@ header {
     /* margin-top: 6rem; */
 }
 
+/* Carousel */
+
 .carousel-dots {
     display: flex;
     justify-content: space-between;
@@ -269,4 +280,122 @@ header {
     border: 1px solid var(--clr-btn-bg-orange)  ;
     width: 0.75rem;
     height: 0.75rem;
+}
+
+
+/* Footer top*/
+
+footer {
+    padding-inline: 0;
+    padding-block-end: 0;
+}
+
+.footer--top {
+    background-color: var(--clr-btn-bg-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 5rem;
+    padding-block-end: 7rem;
+    padding-inline: 8%;
+}
+
+.footer--top-title {
+    color: var(--clr-white);
+    font-size: 3.6rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.footer--btn {
+    background-color: var(--clr-white);
+}
+
+.footer--btn a {
+    color: var(--clr-btn-bg-orange);
+}
+
+/* Footer bottom */
+
+.footer--bot {
+    padding-inline: 8%;
+    background-color: var(--clr-footer-black);
+    padding-block-start: 4.5rem;
+    padding-block-end: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer--subscribe input {
+    border: none;
+    border-radius: 2rem;
+    height: 4.4rem;
+}
+
+.footer--subscribe {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--subscribe input::placeholder {
+    color: var(--clr-gray-placeholder);
+    font-size: 1.45rem;
+    padding-inline: 1.5rem;
+}
+
+.submit-btn {
+    color: var(--clr-white);
+    background-color: var(--clr-btn-bg-orange);
+    border: none;
+    font-size: 1.318rem;
+    font-weight: 500;
+    width: 6.8rem;
+}
+
+.footer--nav {
+    padding-inline: 6%;
+}
+
+.footer--nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer--nav a {
+    color: var(--clr-gray);
+    font-size: 1.45rem; /*1.63rem*/
+    font-weight: 400;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+
+/* Footer social */
+
+.footer--social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-facebook-square, .fa-youtube,
+.fa-youtube, .fa-twitter,
+.fa-pinterest, .fa-instagram {
+    color: var(--clr-white);
+}
+
+.footer--logo, .footer--copyright {
+    align-self: center;
+}
+
+.footer--copyright {
+    color: var(--clr-gray);
+    font-size: 1.22rem;
+    font-weight: 500;
 }
