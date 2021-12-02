@@ -8,13 +8,6 @@
 html {
     font-size: 10px;
 }
-body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    overflow-x: hidden;
-    min-width: 37.5rem;
-    max-width: 144rem;
-    margin-inline: auto;
-}
 
 :root {
     /* Colors */
@@ -34,7 +27,16 @@ body {
     
     /* Media Queries */
     --vp-mobile: 375px;
+    /* --break-point: 769px; */
     --vp-desktop: 1440px;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    /* overflow-x: hidden; */
+    min-width: var(--vp-mobile);
+    max-width: var(--vp-desktop);
+    margin-inline: auto;
 }
 
 /* Propiedades generales */
@@ -201,7 +203,6 @@ header {
 .testimonials {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 6rem;
 }
@@ -210,16 +211,9 @@ header {
     color: var(--clr-h2);
     font-size: 3rem;
     text-align: center;
-    /* margin-bottom: 6rem; */
 }
 
 /* Testimonials cards */
-
-/* .testimonials--cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 .testimonials--card:not(.testimonials--card:nth-child(2)) {
     display: none;
@@ -256,12 +250,6 @@ header {
 
 .testimonials--card-text {
     text-align: center;
-}
-
-
-.testimonials--btn {
-    /* display: block; */
-    /* margin-top: 6rem; */
 }
 
 /* Carousel */
@@ -325,6 +313,13 @@ footer {
     padding-block-end: 4rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer--subscribe {
+    display: flex;
+    /* justify-content: space-between; */
     gap: 3rem;
 }
 
@@ -332,11 +327,6 @@ footer {
     border: none;
     border-radius: 2rem;
     height: 4.4rem;
-}
-
-.footer--subscribe {
-    display: flex;
-    justify-content: space-between;
 }
 
 .footer--subscribe input::placeholder {
@@ -360,7 +350,8 @@ footer {
 
 .footer--nav ul {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 11.2rem;
 }
 
 .footer--nav-column {
@@ -381,7 +372,8 @@ footer {
 
 .footer--social {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 4.23rem;
 }
 
 .fa-facebook-square, .fa-youtube,
@@ -390,12 +382,20 @@ footer {
     color: var(--clr-white);
 }
 
-.footer--logo, .footer--copyright {
+/* .footer--logo, .footer--copyright {
     align-self: center;
-}
+} */
 
 .footer--copyright {
     color: var(--clr-gray);
     font-size: 1.22rem;
     font-weight: 500;
+}
+
+/* Media Queries Rules */
+
+@media only screen and (min-width: 769px){
+    body {
+        background-color: red;
+    }
 }
