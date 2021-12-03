@@ -18,6 +18,7 @@ html {
     --clr-h1:#232C50;
     --clr-h2:#242E53;
     --clr-btn-bg-orange:#F3603B;
+    --clr-btn-hover: #fa9278;
     --clr-gray-placeholder:#A0A0A0;
     --clr-gray:#B3B2B7;
     --clr-darker-gray:#B9B9C1;
@@ -97,8 +98,6 @@ h1, h2, h3, h4, h5 {
 
 header {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -322,16 +321,50 @@ footer {
     gap: 3rem;
 }
 
+.group-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer--subscribe label {
+    color: var(--clr-white);
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
 .footer--subscribe input {
     border: none;
     border-radius: 2rem;
     height: 4.4rem;
+    color: var(--clr-footer-black);
+    font-size: 1.45rem;
+    font-weight: 600;
+    padding-inline: 1.5rem;
 }
 
 .footer--subscribe input::placeholder {
     color: var(--clr-gray-placeholder);
     font-size: 1.45rem;
-    padding-inline: 1.5rem;
+    font-weight: 500;
+}
+
+.footer--subscribe input:invalid {
+    color: rgb(235, 54, 54);
+}
+
+.footer--subscribe input:invalid:focus-visible {
+    outline: 1px solid rgb(235, 54, 54);
+}
+
+.footer--subscribe p {
+    color: rgb(235, 54, 54);
+    font-weight: 400;
+    visibility: hidden;
+}
+
+.footer--subscribe input:invalid ~ p {
+    visibility:visible;
 }
 
 .submit-btn {
@@ -341,6 +374,9 @@ footer {
     font-size: 1.318rem;
     font-weight: 500;
     width: 6.8rem;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 1rem;
 }
 
 .footer--nav {
@@ -393,6 +429,34 @@ footer {
     color: var(--clr-gray);
     font-size: 1.22rem;
     font-weight: 500;
+}
+
+/* Hover */
+
+.btn-primary:hover {
+    background-color: var(--clr-btn-hover);
+}
+
+.footer--btn:hover a {
+    color: var(--clr-btn-hover);
+}
+
+.submit-btn:hover {
+    background-color: var(--clr-btn-hover);
+}
+
+.header--nav a:hover {
+    color: var(--clr-gray);
+}
+
+.footer--nav a:hover {
+    color: var(--clr-btn-hover);
+}
+
+.fa-facebook-square:hover, .fa-youtube:hover,
+.fa-youtube:hover, .fa-twitter:hover,
+.fa-pinterest:hover, .fa-instagram:hover {
+    color: var(--clr-btn-hover);
 }
 
 /* Media Queries Rules */
@@ -551,7 +615,6 @@ footer {
         justify-content: center;
         align-content: space-around;
         height: 24.7rem;
-        gap: 5rem;
     }
 
 
