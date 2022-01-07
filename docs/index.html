@@ -17,17 +17,17 @@
             <img src="img/logo.svg" alt="Logo Manage">
         </div>
         <nav class="header--nav">
-            <ul>
-                <li><a href="#">pricing</a></li>
-                <li><a href="#">product</a></li>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">careers</a></li>
-                <li><a href="#">community</a></li>
+            <ul class="header--links">
+                <li class="header--link"><a href="#">pricing</a></li>
+                <li class="header--link"><a href="#">product</a></li>
+                <li class="header--link"><a href="#">about us</a></li>
+                <li class="header--link"><a href="#">careers</a></li>
+                <li class="header--link"><a href="#">community</a></li>
             </ul>
         </nav>
         <span class="header--btn btn btn-primary"><a href="#">get started</a></span>
         <div class="header--burger">
-            <img src="img/icon-hamburger.svg" alt="Burger Menu">
+            <img class="header--toggle-icon header--toggle-icon__close" src="img/icon-hamburger.svg" alt="Burger Menu">
         </div>
     </header>
     <main>
@@ -45,7 +45,7 @@
         </section>
         <section class="features">
             <div class="features--abstract">
-                <h2 class="features--title">What´s different about Manage?</h2>
+                <h2 class="features--title">What's different about Manage?</h2>
                 <p class="features--text text">
                     Manage provides all the functionality your teas needs, without the complexity. Our software is tailor-made for modern digital product teams.
                 </p>
@@ -75,7 +75,7 @@
             </div>
         </section>
         <section class="testimonials">
-            <h2 class="testimonials--title">What they´ve said</h2>
+            <h2 class="testimonials--title">What they've said</h2>
             <div class="testimonials--cards">
                 <!-- card #1 -->
                 <div class="testimonials--card">
@@ -84,7 +84,7 @@
                     </div>
                     <h5 class="testimonials--card-title">Anisha Dixit</h5>
                     <p class="testimonials--card-text text">
-                        “Manage has supercharged our team´s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”
+                        “Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”
                     </p>
                 </div>
                 <!-- card #2 -->
@@ -102,14 +102,15 @@
                     <div class="testimonials--card-img">
                         <img src="img/avatar-richard.png" alt="Richard profile photo">
                     </div>
-                    <h5 class="testimonials--card-title">Richard Clayderman</h5>
+                    <h5 class="testimonials--card-title">Richard Watts</h5>
                     <p class="testimonials--card-text text">
-                        “Manage allows us to provide structure and process. It keeps us organized and focused. I can´t stop recommending them to everyone i talk to!”
+                        “Manage allows us to provide structure and process. It keeps us organized and focused. I can't stop recommending them to everyone I talk to!”
                     </p>
                 </div>
             </div>
             <!-- Puntos carrusel -->
             <div class="carousel-dots">
+                <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -127,7 +128,7 @@
                 <div class="group-form">
                     <label for="email">Consider subscribing</label>
                     <input type="email" id="email" name="email" placeholder="Update in your inbox...">  
-                    <p>Please insert a valid email</p>
+                    <p class="email--error">Please insert a valid email</p>
                 </div>
                 <button type="submit" class="submit-btn btn">Go</button>
             </form>
@@ -162,5 +163,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
