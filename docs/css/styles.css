@@ -233,6 +233,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 6rem;
+    overflow-x: hidden;
 }
 
 .testimonials--title {
@@ -243,8 +244,18 @@ header {
 
 /* Testimonials cards */
 
-.testimonials--card:not(.testimonials--card:nth-child(2)) {
-    display: none;
+
+.testimonials--cards {
+    --n: 1;
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    width: calc(var(--n)*100vw);
+    transform: translate(calc(var(--i, -1.5)/var(--n)*-100% + var(--tx, 0px)));
+}
+
+.smooth { 
+    transition: transform calc(var(--f, 1)*.5s) ease-out; 
 }
 
 /* Testimonial single card */
@@ -257,6 +268,8 @@ header {
     gap: 1.5rem;
     padding: 2.5rem;
     position: relative;
+    width: calc(100%/var(--n));
+    pointer-events: none;
 }
 
 .testimonials--card-img {
@@ -613,11 +626,17 @@ footer {
         display: flex;
         flex-direction: row;
         gap: 2rem;
-        justify-content: space-between;
+        justify-content: center;
+        width: unset;
+        transform: none;
     }
 
-    .testimonials--card:not(.testimonials--card:nth-child(2)) {
-        display: flex;
+    .testimonials--card {
+        width: unset;
+    }
+
+    .testimonials--card:nth-child(4) {
+        display: none;
     }
 
     .carousel-dots {
